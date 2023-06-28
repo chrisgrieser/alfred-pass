@@ -1,18 +1,55 @@
-# {{workflow-name}}
-![](https://img.shields.io/github/downloads/chrisgrieser/{{workflow-id}}/total?label=Total%20Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/{{workflow-id}}?label=Latest%20Release&style=plastic) [![](https://img.shields.io/badge/changelog-click%20here-FFE800?style=plastic)](./Changelog.md)
+# Alfred Client for the [Pass-CLI](https://www.passwordstore.org/)
+![](https://img.shields.io/github/downloads/chrisgrieser/alfred-pass/total?label=Total%20Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/alfred-pass?label=Latest%20Release&style=plastic) [![](https://img.shields.io/badge/changelog-click%20here-FFE800?style=plastic)](./Changelog.md)
 
-{{workflow-description}}
+<img src="./assets/showcase.png" alt="showcase" width="50%">
 
 ## Features
-- 
+- Copy password or any other property of an entry.
+- Create a new entry.
+- [Inherits settings from your `.zshenv`.](#configuration)
+- Option to trigger `pass git push` automatically after any change.
 
-## Installation
-[➡️ Download the latest release.](https://github.com/chrisgrieser/{{workflow-id}}/releases/latest)
+## Requirements & Installation
+1. [➡️ Download the latest release.](https://github.com/chrisgrieser/alfred-pass/releases/latest)
+2. Install the requirements
 
-When admitted to the Alfred Gallery, the workflow auto-updates via Alfred's workflow-update mechanism.
+    ```bash
+    brew install pass pinentry-mac
+    ```
+
+3. Setup `pass` with a GPG key. See the [Pass-Website](https://www.passwordstore.org/) for further information.
+4. Setup `pinentry-mac` as your `pinentry-program`:
+
+    ```bash
+    [[ -d "$HOME/.gnupg" ]] || mkdir "$HOME/.gnupg"
+    echo "pinentry-program $(brew --prefix)/bin/pinentry-mac" > $HOME/.gnupg/gpg-agent.conf
+    gpgconf --kill gpg-agent # restart the agent
+    ```
+
+> __Note__  
+> When admitted to the Alfred Gallery, the workflow auto-updates via Alfred's workflow-update mechanism.
+
+## Configuration
+This workflow is reads all your `PASSWORD_STORE_*` environment variables that have been added to your `~/.zshenv`. This means that most configuration is done by exporting respective variables in `~/.zshenv`, this workflow therefore has only few configuration options that concern Alfred in particular. Example: `export PASSWORD_STORE_GENERATED_LENGTH=32`. For information about the available environment variables, see the [pass man page](https://git.zx2c4.com/password-store/about/).
+
+If you are using a custom password-store directory, you __must__ export your `PASSWORD_STORE_DIR` in your `~/.zshenv` for this workflow to work. 
 
 ## Usage
-- 
+- Alfred keyword: `pw`
+- `↵`: Copy password to the clipboard
+- `⌘↵`: Edit entry in your Terminal, using [the Terminal configured in your
+  Alfred settings.](https://www.alfredapp.com/help/features/terminal/)
+- `⌥↵`: Reveal `.gpg` file of the entry in Finder.
+- `⌃↵`: Delete entry.
+- `⇧↵`: Show non-password entries. Select any one of them to copy the value to
+  your clipboard.
+- If your search query does not find an entry, you can directly create a new
+  entry by pressing `↵`. You are then be prompted for a folder to place the new entry in. The password of the new entry is auto-generated based on your `pass` settings, or can be read from your clipboard.
+
+## Note on security
+- Please note that your system clipboard is cleared according to your `gpg` settings, any password may still be saved in your Alfred clipboard history. [You can clear your Alfred clipboard history via `clear`](https://www.alfredapp.com/help/features/clipboard/).
+- This workflow is just a more convenient interface for `pass`. As such, no
+  passwords are saved by the workflow in any way. The workflow is open source, so feel free to check yourself.
 
 ## Credits
 <!-- vale Google.FirstPerson = NO -->
