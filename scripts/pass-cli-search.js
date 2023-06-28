@@ -6,13 +6,6 @@ app.includeStandardAdditions = true;
 
 const fileExists = (/** @type {string} */ filePath) => Application("Finder").exists(Path(filePath));
 
-/** @param {string} str */
-function alfredMatcher(str) {
-	const clean = str.replace(/[-()_.:#/\\;,[\]]/g, " ");
-	const camelCaseSeperated = str.replace(/([A-Z])/g, " $1");
-	return [clean, camelCaseSeperated, str].join(" ") + " ";
-}
-
 //──────────────────────────────────────────────────────────────────────────────
 
 /** @param {string[]} argv */
@@ -33,10 +26,7 @@ function run(argv) {
 	}
 
 	// `-iname` makes the search case-insensitive
-	const passwordlist = app.doShellScript(
-		`cd "${passwordStore}" ; ` +
-			`find . -iname "*${query}*.gpg" -or -ipath "*${query}*" -type f -and -not -name ".DS_Store"`,
-	);
+	const passwordlist = app.doShellScript(`cd "${passwordStore}" ; find . -ipath "*${query}*.gpg"`);
 	let createNewPassword;
 	if (passwordlist) {
 		createNewPassword = false;
