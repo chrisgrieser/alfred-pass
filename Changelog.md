@@ -1,3 +1,3 @@
-- 2023-06-28	release 1.0.1
-- 2023-06-28	fix: password-search-matching
-- 2023-06-28	release 1.0.0
+- 2023-07-02	release 1.1.0
+- 2023-07-02	fix and restructure various stuff
+- 2023-06-28	fix: screenshots without border
