@@ -1,5 +1,5 @@
 # Alfred Client for the [Pass-CLI](https://www.passwordstore.org/)
-![](https://img.shields.io/github/downloads/chrisgrieser/alfred-pass/total?label=Total%20Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/alfred-pass?label=Latest%20Release&style=plastic) [![](https://img.shields.io/badge/changelog-click%20here-FFE800?style=plastic)](./Changelog.md)
+![](https://img.shields.io/github/downloads/chrisgrieser/alfred-pass/total?label=Total%20Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/alfred-pass?label=Latest%20Release&style=plastic)
 
 <img src="./assets/showcase.png" alt="showcase" width="50%">
 
@@ -8,6 +8,8 @@
 - Create a new entry.
 - [Inherits settings from your `.zshenv`.](#configuration)
 - Option to trigger `pass git push` automatically after any change.
+- As opposed to regular usage of `pass`, the copied password is treated as
+  transient, meaning it does not appear in Alfred's clipboard history.
 
 ## Requirements & Installation
 1. [➡️ Download the latest release.](https://github.com/chrisgrieser/alfred-pass/releases/latest)
@@ -30,9 +32,12 @@
 > When admitted to the Alfred Gallery, the workflow auto-updates via Alfred's workflow-update mechanism.
 
 ## Configuration
-This workflow is reads all your `PASSWORD_STORE_*` environment variables that have been added to your `~/.zshenv`. This means that most configuration is done by exporting respective variables in `~/.zshenv`, this workflow therefore has only few configuration options that concern Alfred in particular. Example: `export PASSWORD_STORE_GENERATED_LENGTH=32`. For information about the available environment variables, see the [pass man page](https://git.zx2c4.com/password-store/about/).
+This workflow is reads all your `PASSWORD_STORE_*` environment variables that have been added to your `~/.zshenv`. This means that most configuration is done by exporting respective variables in `~/.zshenv`, this workflow therefore has only few configuration options that concern Alfred in particular. 
 
-If you are using a custom password-store directory, you __must__ export your `PASSWORD_STORE_DIR` in your `~/.zshenv` for this workflow to work. 
+For information about the available environment variables, see the [pass man page](https://git.zx2c4.com/password-store/about/).
+
+> __Note__  
+> If you are using a custom password-store directory, you must export your `PASSWORD_STORE_DIR` in your `~/.zshenv` for this workflow to work. 
 
 ## Usage
 - Alfred keyword: `pw`
@@ -47,7 +52,7 @@ If you are using a custom password-store directory, you __must__ export your `PA
 
 ## Notes on security
 - All contents copied by this clipboard are marked as "transient," meaning most
-  clipboard history apps, including Alfred itself, should ignore them. 
+  clipboard history apps, including Alfred itself, ignore them. 
 - This workflow is just convenient UI for `pass`. As such, no passwords are saved by the workflow in any way. The workflow is open source, so feel free to check yourself.
 
 ## Credits
