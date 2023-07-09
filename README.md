@@ -52,8 +52,8 @@ For information about the available environment variables, see the [pass man pag
 
 ## Notes on security
 - All contents copied by this clipboard are marked as "transient," meaning most
-  clipboard history apps, including Alfred itself, ignore them. 
-- This workflow is just convenient UI for `pass`. As such, no passwords are saved by the workflow in any way. The workflow is open source, so feel free to check yourself.
+  clipboard history apps will ignore them, including Alfred's clipboard history.
+- This workflow is just a convenient UI for `pass`. As such, no passwords are saved by the workflow in any way. The workflow is open source, so feel free to check yourself.
 
 ## Credits
 <!-- vale Google.FirstPerson = NO -->
