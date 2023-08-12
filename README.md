@@ -12,7 +12,7 @@
   transient, meaning it does not appear in Alfred's clipboard history.
 
 ## Requirements & Installation
-1. [➡️ Download the latest release.](https://github.com/chrisgrieser/alfred-pass/releases/latest)
+1. [➡️ Download the latest release.](./releases/latest)
 2. Install the requirements
 
     ```bash
