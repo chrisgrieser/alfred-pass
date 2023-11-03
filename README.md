@@ -61,7 +61,7 @@ For information about the available environment variables, see the [pass man pag
 - Search your passwords via the keyword `pw`.
 - <kbd>⏎</kbd>: Copy password to the clipboard. If your search query does not
   find an entry, you can directly create a new entry by pressing `↵`. You are
-  then be prompted for a folder to place the new entry in. The password of the
+  then prompted for a folder to place the new entry in. The password of the
   new entry is auto-generated based on your `pass` settings, or can be inserted
   from your clipboard.
 - <kbd>⌘</kbd><kbd>⏎</kbd>: Edit entry in your Terminal, using [the Terminal
