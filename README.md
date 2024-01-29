@@ -41,10 +41,6 @@
    gpgconf --kill gpg-agent # restart the agent
    ```
 
-> **Note**  
-> When admitted to the Alfred Gallery, the workflow auto-updates via Alfred's
-> workflow-update mechanism.
-
 ## Configuration
 This workflow is reads all your `PASSWORD_STORE_*` environment variables that
 have been added to your `~/.zshenv`. This means that most configuration is done
@@ -53,17 +49,13 @@ only few configuration options that concern Alfred in particular.
 
 For information about the available environment variables, see the [pass man page](https://git.zx2c4.com/password-store/about/).
 
-> **Note**  
-> If you are using a custom password-store directory, you must export your
+> [!NOTE]
+> If you are using a custom password-store directory, you **must** export your
 > `PASSWORD_STORE_DIR` in your `~/.zshenv` for this workflow to work.
 
 ## Usage
 - Search your passwords via the keyword `pw`.
-- <kbd>⏎</kbd>: Copy password to the clipboard. If your search query does not
-  find an entry, you can directly create a new entry by pressing `↵`. You are
-  then prompted for a folder to place the new entry in. The password of the
-  new entry is auto-generated based on your `pass` settings, or can be inserted
-  from your clipboard.
+- <kbd>⏎</kbd>: Copy password to the clipboard. 
 - <kbd>⌘</kbd><kbd>⏎</kbd>: Edit entry in your Terminal, using [the Terminal
   configured in your Alfred
   settings](https://www.alfredapp.com/help/features/terminal/) and your
@@ -72,6 +64,9 @@ For information about the available environment variables, see the [pass man pag
 - <kbd>⌃</kbd><kbd>⏎</kbd>: Delete the entry.
 - <kbd>⇧</kbd><kbd>⏎</kbd>: Show details of the entry. Select any one of them to
   copy the value to your clipboard.
+- Use `pw new` to create a new entry. You are then prompted for a folder to
+  place the new entry in. The password of the new entry is auto-generated based
+  on your `pass` settings, or can be inserted from your clipboard.
 
 ## Notes on security
 <!-- vale Google.Will = NO -->
