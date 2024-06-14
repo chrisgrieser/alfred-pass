@@ -15,11 +15,7 @@ function run() {
 	// GUARD
 	if (!Application("Finder").exists(Path(passwordStore))) {
 		return JSON.stringify({
-			items: {
-				title: "⚠️ Password Store not found.",
-				subtitle: passwordStore,
-				valid: false,
-			},
+			items: { title: "⚠️ Password Store not found.", subtitle: passwordStore, valid: false },
 		});
 	}
 
@@ -30,7 +26,7 @@ function run() {
 		.map((gpgFile) => {
 			const id = gpgFile.slice(2, -4);
 			const pathParts = id.split("/");
-			const name = pathParts.pop();
+			const name = pathParts.pop() || "ERROR";
 			const group = pathParts.join("/");
 			const path = `${passwordStore}/${gpgFile}`;
 			return {
