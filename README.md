@@ -1,6 +1,8 @@
-# Alfred Client for the [Pass-CLI](https://www.passwordstore.org/)
+# Alfred Client for the Pass-CLI
 ![Download count](https://img.shields.io/github/downloads/chrisgrieser/alfred-pass/total?label=Total%20Downloads&style=plastic)
-![last release](https://img.shields.io/github/v/release/chrisgrieser/alfred-pass?label=Latest%20Release&style=plastic)
+![Last release](https://img.shields.io/github/v/release/chrisgrieser/alfred-pass?label=Latest%20Release&style=plastic)
+
+Alfred-based UI for [pass](https://www.passwordstore.org/).
 
 <img width="70%" alt="showcase" src="https://github.com/user-attachments/assets/46d22c4d-cbdf-4d09-997b-d2194acedccc">
 
@@ -47,7 +49,8 @@ have been added to your `~/.zshenv`. This means that most configuration is done
 by exporting respective variables in `~/.zshenv`, this workflow therefore has
 only few configuration options that concern Alfred in particular.
 
-For information about the available environment variables, see the [pass man page](https://git.zx2c4.com/password-store/about/).
+For information about the available environment variables, see the [pass man
+page](https://git.zx2c4.com/password-store/about/).
 
 > [!NOTE]
 > If you are using a custom password-store directory, you **must** export your
@@ -55,7 +58,7 @@ For information about the available environment variables, see the [pass man pag
 
 ## Usage
 - Search your passwords via the keyword `pw`.
-- <kbd>⏎</kbd>: Copy password to the clipboard. 
+- <kbd>⏎</kbd>: Copy password to the clipboard.
 - <kbd>⌘</kbd><kbd>⏎</kbd>: Edit entry in your Terminal, using [the Terminal
   configured in your Alfred
   settings](https://www.alfredapp.com/help/features/terminal/) and your
@@ -72,24 +75,20 @@ For information about the available environment variables, see the [pass man pag
 <!-- vale Google.Will = NO -->
 - All contents copied by this clipboard are marked as "transient," meaning most
   clipboard history apps will ignore them, including Alfred's clipboard history.
-- This workflow is just a convenient UI for `pass`. As such, no passwords are
-  saved by the workflow in any way. The workflow is open source, so feel free to
-  check yourself.
+- This workflow is just a convenient UI for `pass`. As such, no password is
+  ever stored by this workflow in any way. The workflow is open source, so feel
+  free to check yourself.
 <!-- vale Google.Will = YES -->
 
-## Credits
 <!-- vale Google.FirstPerson = NO -->
-**About Me**  
+## Credits
 In my day job, I am a sociologist studying the social mechanisms underlying the
 digital economy. For my PhD project, I investigate the governance of the app
 economy and how software ecosystems manage the tension between innovation and
 compatibility. If you are interested in this subject, feel free to get in touch.
 
-**Profiles**
-- [reddit](https://www.reddit.com/user/pseudometapseudo)
-- [Discord](https://discordapp.com/users/462774483044794368/)
 - [Academic Website](https://chris-grieser.de/)
-- [Twitter](https://twitter.com/pseudo_meta)
+- [Mastodon](https://pkm.social/@pseudometa)
 - [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
 - [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/)
 
