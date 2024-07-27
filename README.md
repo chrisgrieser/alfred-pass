@@ -2,7 +2,7 @@
 ![Download count](https://img.shields.io/github/downloads/chrisgrieser/alfred-pass/total?label=Total%20Downloads&style=plastic)
 ![last release](https://img.shields.io/github/v/release/chrisgrieser/alfred-pass?label=Latest%20Release&style=plastic)
 
-<img src="./assets/showcase.png" alt="showcase" width="50%">
+<img width="70%" alt="showcase" src="https://github.com/user-attachments/assets/46d22c4d-cbdf-4d09-997b-d2194acedccc">
 
 <!-- toc -->
 
