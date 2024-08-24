@@ -58,18 +58,21 @@ page](https://git.zx2c4.com/password-store/about/).
 
 ## Usage
 - Search your passwords via the keyword `pw`.
-- <kbd>⏎</kbd>: Copy password to the clipboard.
-- <kbd>⌘</kbd><kbd>⏎</kbd>: Edit entry in your Terminal, using [the Terminal
-  configured in your Alfred
-  settings](https://www.alfredapp.com/help/features/terminal/) and your
-  `$EDITOR`.
-- <kbd>⌥</kbd><kbd>⏎</kbd>: Reveal `.gpg` file of the entry in Finder.
-- <kbd>⌃</kbd><kbd>⏎</kbd>: Delete the entry.
-- <kbd>⇧</kbd><kbd>⏎</kbd>: Show details of the entry. Select any one of them to
-  copy the value to your clipboard.
-- Use `pw new` to create a new entry. You are then prompted for a folder to
-  place the new entry in. The password of the new entry is auto-generated based
-  on your `pass` settings, or can be inserted from your clipboard.
+   + <kbd>⏎</kbd>: Copy password to the clipboard.
+   + <kbd>⌘</kbd><kbd>⏎</kbd>: Edit entry in your Terminal, using [the Terminal
+   configured in your Alfred
+   settings](https://www.alfredapp.com/help/features/terminal/) and your
+   `$EDITOR`.
+   + <kbd>⌥</kbd><kbd>⏎</kbd>: Reveal `.gpg` file of the entry in Finder.
+   + <kbd>⌃</kbd><kbd>⏎</kbd>: Delete the entry.
+   + <kbd>⇧</kbd><kbd>⏎</kbd>: Show details of the entry. Select any one of them to
+   copy the value to your clipboard.
+- Use the keyword `pw new` to create a new entry. You are then prompted for a
+  folder to place the new entry in. The password of the new entry is
+  auto-generated based on your `pass` settings, or can be inserted from your
+  clipboard.
+- Use `pw gen` to generate a new password without creating a new entry. This can
+  be useful to change an existing password.
 
 ## Notes on security
 <!-- vale Google.Will = NO -->
