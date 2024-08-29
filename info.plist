@@ -593,7 +593,7 @@
 				<key>variables</key>
 				<dict>
 					<key>entry</key>
-					<string>{query}</string>
+					<string>{var:folder}/{query}</string>
 					<key>generatePassword</key>
 					<string>true</string>
 				</dict>
@@ -647,7 +647,7 @@
 				<key>variables</key>
 				<dict>
 					<key>entry</key>
-					<string>{query}</string>
+					<string>{var:folder}/{query}</string>
 					<key>generatePassword</key>
 					<string>false</string>
 				</dict>
@@ -779,7 +779,7 @@
 				<key>text</key>
 				<string>{var:entry}</string>
 				<key>title</key>
-				<string>📋 Password copied for</string>
+				<string>📋 Copied {var:new}password for</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -909,8 +909,8 @@
 				<true/>
 				<key>variables</key>
 				<dict>
-					<key>entry</key>
-					<string>New {var:entry}</string>
+					<key>new</key>
+					<string>new </string>
 				</dict>
 			</dict>
 			<key>type</key>
@@ -1335,7 +1335,7 @@ Created by [Chris Grieser](https://chris-grieser.de/).</string>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>note</key>
-			<string>add "new" to entry name</string>
+			<string>set "new" var (display purposes only)</string>
 			<key>xpos</key>
 			<real>765</real>
 			<key>ypos</key>
