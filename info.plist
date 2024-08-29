@@ -924,29 +924,6 @@
 			<key>config</key>
 			<dict>
 				<key>concurrently</key>
-				<true/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>./scripts/auto-push.sh</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>0BC9A821-35ED-45C1-AA5A-A64A696BBFC8</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
 				<integer>0</integer>
@@ -986,6 +963,29 @@
 			<string>6DEB3631-BC94-4826-A0A0-09A177B749C3</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<true/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>./scripts/auto-push.sh</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>0BC9A821-35ED-45C1-AA5A-A64A696BBFC8</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1218,7 +1218,7 @@
 	<key>readme</key>
 	<string># Alfred Client for the Pass-CLI
 ## Setup
-1. Setup `pass` with an GPG key. See the [pass-website](https://www.passwordstore.org/) for more information.
+1. Setup `pass` with an GPG key. See the [pass website](https://www.passwordstore.org/) for more information.
 2. Setup `pinentry-mac` as your `pinentry-program`:
 
 `[[ -d "$HOME/.gnupg" ]] || mkdir ~/.gnupg`
@@ -1261,20 +1261,20 @@ Created by [Chris Grieser](https://chris-grieser.de/).</string>
 			<key>colorindex</key>
 			<integer>5</integer>
 			<key>xpos</key>
-			<real>820</real>
+			<real>780</real>
 			<key>ypos</key>
 			<real>15</real>
 		</dict>
 		<key>0BC9A821-35ED-45C1-AA5A-A64A696BBFC8</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>1</integer>
+			<integer>10</integer>
 			<key>note</key>
 			<string>auto-push</string>
 			<key>xpos</key>
-			<real>935</real>
+			<real>1030</real>
 			<key>ypos</key>
-			<real>430</real>
+			<real>435</real>
 		</dict>
 		<key>0F6DB773-7447-4D7C-900E-59F3E9C69B19</key>
 		<dict>
@@ -1283,7 +1283,7 @@ Created by [Chris Grieser](https://chris-grieser.de/).</string>
 			<key>note</key>
 			<string>generate</string>
 			<key>xpos</key>
-			<real>670</real>
+			<real>630</real>
 			<key>ypos</key>
 			<real>15</real>
 		</dict>
@@ -1366,7 +1366,7 @@ Created by [Chris Grieser](https://chris-grieser.de/).</string>
 			<key>note</key>
 			<string>if password is generated</string>
 			<key>xpos</key>
-			<real>995</real>
+			<real>955</real>
 			<key>ypos</key>
 			<real>45</real>
 		</dict>
@@ -1406,7 +1406,7 @@ Created by [Chris Grieser](https://chris-grieser.de/).</string>
 			<key>colorindex</key>
 			<integer>5</integer>
 			<key>xpos</key>
-			<real>575</real>
+			<real>535</real>
 			<key>ypos</key>
 			<real>20</real>
 		</dict>
@@ -1466,7 +1466,7 @@ Created by [Chris Grieser](https://chris-grieser.de/).</string>
 			<key>note</key>
 			<string>set entry &amp; auto-generation choice</string>
 			<key>xpos</key>
-			<real>575</real>
+			<real>535</real>
 			<key>ypos</key>
 			<real>80</real>
 		</dict>
@@ -1475,7 +1475,7 @@ Created by [Chris Grieser](https://chris-grieser.de/).</string>
 			<key>colorindex</key>
 			<integer>5</integer>
 			<key>xpos</key>
-			<real>410</real>
+			<real>370</real>
 			<key>ypos</key>
 			<real>15</real>
 		</dict>
@@ -1484,7 +1484,7 @@ Created by [Chris Grieser](https://chris-grieser.de/).</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<real>240</real>
+			<real>205</real>
 			<key>ypos</key>
 			<real>150</real>
 		</dict>
@@ -1575,7 +1575,7 @@ Created by [Chris Grieser](https://chris-grieser.de/).</string>
 			<key>colorindex</key>
 			<integer>5</integer>
 			<key>xpos</key>
-			<real>240</real>
+			<real>205</real>
 			<key>ypos</key>
 			<real>15</real>
 		</dict>
