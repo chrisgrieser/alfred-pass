@@ -33,8 +33,8 @@ Alfred-based UI for [pass](https://www.passwordstore.org/).
    brew install pass pinentry-mac
    ```
 
-3. Setup `pass` with a GPG key. See the [Pass
-   Website](https://www.passwordstore.org/) for further information.
+3. Setup `pass` with a GPG key. See the [pass
+   website](https://www.passwordstore.org/) for further information.
 4. Setup `pinentry-mac` as your `pinentry-program`:
 
    ```bash
@@ -65,14 +65,16 @@ page](https://git.zx2c4.com/password-store/about/).
    `$EDITOR`.
    + <kbd>⌥</kbd><kbd>⏎</kbd>: Reveal `.gpg` file of the entry in Finder.
    + <kbd>⌃</kbd><kbd>⏎</kbd>: Delete the entry.
-   + <kbd>⇧</kbd><kbd>⏎</kbd>: Show details of the entry. Select any one of them to
-   copy the value to your clipboard.
+   + <kbd>⇧</kbd><kbd>⏎</kbd>: Show details of the entry. Select any one of them
+     to copy the value to your clipboard.
+   + <kbd>Fn</kbd>: Generate new password and overwrite this entry's password
+     with it. Afterward, copy the new password. (⚠️ This removes the old password
+     and is not reversible if you are not using git.)
 - Use the keyword `pw new` to create a new entry. You are then prompted for a
   folder to place the new entry in. The password of the new entry is
   auto-generated based on your `pass` settings, or can be inserted from your
   clipboard.
-- Use `pw gen` to generate a new password without creating a new entry. This can
-  be useful to change an existing password.
+- Use `pw gen` to generate a new password without creating a new entry.
 
 ## Notes on security
 <!-- vale Google.Will = NO -->
