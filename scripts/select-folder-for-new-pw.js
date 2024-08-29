@@ -23,6 +23,7 @@ function run() {
 			folder = folder.slice(2); // remove `./`
 			passwordFolders.push({
 				title: "📂 " + folder,
+				uid: folder, // remember user choice for next time
 				arg: "", // empty for next Alfred prompt
 				variables: { folder: folder },
 			});
@@ -33,6 +34,7 @@ function run() {
 	passwordFolders.push({
 		title: "📂 * root",
 		arg: "",
+		uid: ".",
 		variables: { folder: "." },
 	});
 
