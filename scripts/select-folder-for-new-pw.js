@@ -13,17 +13,21 @@ function run() {
 		app.pathTo("home folder") + "/.password-store";
 
 	/** @type{AlfredItem[]} */
-	const passwordFolders = app
-		.doShellScript(`cd "${passwordStore}" ; find . -type d -mindepth 1 -not -path "./.git*"`)
-		.split("\r")
-		.map((/** @type {string} */ folder) => {
+	const passwordFolders = [];
+
+	const shellCmd = `cd "${passwordStore}" ; find . -type d -mindepth 1 -not -path "./.git*"`;
+	const stdout = app.doShellScript(shellCmd);
+	const userHasFolders = stdout.trim() !== "";
+	if (userHasFolders) {
+		stdout.split("\r").map((/** @type {string} */ folder) => {
 			folder = folder.slice(2); // remove `./`
-			return {
+			passwordFolders.push({
 				title: "📂 " + folder,
 				arg: "", // empty for next Alfred prompt
 				variables: { folder: folder },
-			};
+			});
 		});
+	}
 
 	// add root at the bottom of the list
 	passwordFolders.push({
