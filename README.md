@@ -18,10 +18,13 @@ Alfred-based UI for [pass](https://www.passwordstore.org/).
 <!-- tocstop -->
 
 ## Features
-- Copy password or any other property of an entry.
+- Copy password to the clipboard.
 - Create a new entry.
+- Delete an entry.
+- Update the password of an entry.
+- Inspect and copy non-password properties of an entry.
 - [Inherits settings from your `.zshenv`.](#configuration)
-- Option to trigger `pass git push` automatically after any change.
+- Optionally trigger `pass git push` automatically after any change.
 - As opposed to regular usage of `pass`, the copied password is treated as
   transient, meaning it does not appear in Alfred's clipboard history.
 
@@ -45,9 +48,9 @@ Alfred-based UI for [pass](https://www.passwordstore.org/).
 
 ## Configuration
 This workflow is reads all your `PASSWORD_STORE_*` environment variables that
-have been added to your `~/.zshenv`. This means that most configuration is done
-by exporting respective variables in `~/.zshenv`, this workflow therefore has
-only few configuration options that concern Alfred in particular.
+have been added to your `~/.zshenv`, so most configuration is done by exporting
+respective variables in `~/.zshenv`. Example: `export
+PASSWORD_STORE_GENERATED_LENGTH=32`.
 
 For information about the available environment variables, see the [pass man
 page](https://git.zx2c4.com/password-store/about/).
@@ -64,12 +67,13 @@ page](https://git.zx2c4.com/password-store/about/).
    settings](https://www.alfredapp.com/help/features/terminal/) and your
    `$EDITOR`.
    + <kbd>⌥</kbd><kbd>⏎</kbd>: Reveal `.gpg` file of the entry in Finder.
-   + <kbd>⌃</kbd><kbd>⏎</kbd>: Delete the entry.
+   + <kbd>⌃</kbd><kbd>⏎</kbd>: Delete the entry. (⚠️ This is irreversible if you
+     are not using git.)
    + <kbd>⇧</kbd><kbd>⏎</kbd>: Show details of the entry. Select any one of them
      to copy the value to your clipboard.
-   + <kbd>Fn</kbd>: Generate new password and overwrite this entry's password
-     with it. Afterward, copy the new password. (⚠️ This removes the old password
-     and is not reversible if you are not using git.)
+   + <kbd>Fn</kbd><kbd>⏎</kbd>: Generate a new password and overwrite this
+     entry's password with it. Afterward, copy the new password. (⚠️ This removes
+     the old password and is not reversible if you are not using git.)
 - Use the keyword `pw new` to create a new entry. You are then prompted for a
   folder to place the new entry in. The password of the new entry is
   auto-generated based on your `pass` settings, or can be inserted from your
