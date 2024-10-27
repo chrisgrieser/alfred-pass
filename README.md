@@ -33,25 +33,24 @@ Alfred-based UI for [pass](https://www.passwordstore.org/).
 1. [➡️ Download the latest release](https://github.com/chrisgrieser/alfred-pass/releases/latest)
 2. Install the requirements
 
-   ```bash
-   brew install pass pinentry-mac
-   ```
+	```bash
+	brew install pass pinentry-mac
+	```
 
 3. Setup `pass` with a GPG key. See the [pass
-   website](https://www.passwordstore.org/) for further information.
+	website](https://www.passwordstore.org/) for further information.
 4. Setup `pinentry-mac` as your `pinentry-program`:
 
-   ```bash
-   [[ -d "$HOME/.gnupg" ]] || mkdir "$HOME/.gnupg"
-   echo "pinentry-program $(brew --prefix)/bin/pinentry-mac" > $HOME/.gnupg/gpg-agent.conf
-   gpgconf --kill gpg-agent # restart the agent
-   ```
+	```bash
+	[[ -d "$HOME/.gnupg" ]] || mkdir "$HOME/.gnupg"
+	echo "pinentry-program $(brew --prefix)/bin/pinentry-mac" > $HOME/.gnupg/gpg-agent.conf
+	gpgconf --kill gpg-agent # restart the agent
+	```
 
 ## Configuration
-This workflow is reads all your `PASSWORD_STORE_*` environment variables that
-have been added to your `~/.zshenv`, so most configuration is done by exporting
-respective variables in `~/.zshenv`. Example: `export
-PASSWORD_STORE_GENERATED_LENGTH=32`.
+This workflow reads all `PASSWORD_STORE_*` environment variables that have been
+added to your `~/.zshenv`, so most configuration is done by exporting respective
+variables in `~/.zshenv`. Example: `export PASSWORD_STORE_GENERATED_LENGTH=32`.
 
 For information about the available environment variables, see the [pass man
 page](https://git.zx2c4.com/password-store/about/).
@@ -62,19 +61,19 @@ page](https://git.zx2c4.com/password-store/about/).
 
 ## Usage
 - Search your passwords via the keyword `pw`.
-   + <kbd>⏎</kbd>: Copy password to the clipboard.
-   + <kbd>⌘</kbd><kbd>⏎</kbd>: Edit entry in your Terminal, using [the Terminal
-   configured in your Alfred
-   settings](https://www.alfredapp.com/help/features/terminal/) and your
-   `$EDITOR`.
-   + <kbd>⌥</kbd><kbd>⏎</kbd>: Reveal `.gpg` file of the entry in Finder.
-   + <kbd>⌃</kbd><kbd>⏎</kbd>: Delete the entry. (⚠️ This is irreversible if you
-     are not using git.)
-   + <kbd>⇧</kbd><kbd>⏎</kbd>: Show details of the entry. Select any one of them
-     to copy the value to your clipboard.
-   + <kbd>Fn</kbd><kbd>⏎</kbd>: Generate a new password and overwrite this
-     entry's password with it. Afterward, copy the new password. (⚠️ This removes
-     the old password and is not reversible if you are not using git.)
+	+ <kbd>⏎</kbd>: Copy password to the clipboard.
+	+ <kbd>⌘</kbd><kbd>⏎</kbd>: Edit entry in your Terminal, using [the Terminal
+	configured in your Alfred
+	settings](https://www.alfredapp.com/help/features/terminal/) and your
+	`$EDITOR`.
+	+ <kbd>⌥</kbd><kbd>⏎</kbd>: Reveal `.gpg` file of the entry in Finder.
+	+ <kbd>⌃</kbd><kbd>⏎</kbd>: Delete the entry. (⚠️ This is irreversible if you
+	  are not using git.)
+	+ <kbd>⇧</kbd><kbd>⏎</kbd>: Show details of the entry. Select one of them
+	  to copy the value to your clipboard.
+	+ <kbd>Fn</kbd><kbd>⏎</kbd>: Generate a new password and overwrite this
+	  entry's password with it. Afterward, copy the new password. (⚠️ This removes
+	  the old password and is not reversible if you are not using git.)
 - Use the keyword `pw new` to create a new entry. You are then prompted for a
   folder to place the new entry in. The password of the new entry is
   auto-generated based on your `pass` settings, or can be inserted from your
@@ -82,15 +81,11 @@ page](https://git.zx2c4.com/password-store/about/).
 - Use `pw gen` to generate a new password without creating a new entry.
 
 ## Notes on security
-<!-- vale Google.Will = NO -->
 - All contents copied by this clipboard are marked as "transient," meaning most
   clipboard history apps will ignore them, including Alfred's clipboard history.
-- This workflow is just a convenient UI for `pass`. As such, no password is
-  ever stored by this workflow in any way. The workflow is open source, so feel
-  free to check yourself.
-<!-- vale Google.Will = YES -->
+- This workflow is just a convenient UI for `pass`. As such, no password is ever
+  stored by this workflow in any way. The workflow is completely open source.
 
-<!-- vale Google.FirstPerson = NO -->
 ## Credits
 In my day job, I am a sociologist studying the social mechanisms underlying the
 digital economy. For my PhD project, I investigate the governance of the app
@@ -104,9 +99,9 @@ compatibility. If you are interested in this subject, feel free to get in touch.
 
 <a href='https://ko-fi.com/Y8Y86SQ91' target='_blank'>
 <img
-   height='36'
-   style='border:0px;height:36px;'
-   src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3'
-   border='0'
-   alt='Buy Me a Coffee at ko-fi.com'
+	height='36'
+	style='border:0px;height:36px;'
+	src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3'
+	border='0'
+	alt='Buy Me a Coffee at ko-fi.com'
 /></a>
