@@ -38,7 +38,7 @@ Alfred-based UI for [pass](https://www.passwordstore.org/).
 	```
 
 3. Setup `pass` with a GPG key. See the [pass
-	website](https://www.passwordstore.org/) for further information.
+    website](https://www.passwordstore.org/) for further information.
 4. Setup `pinentry-mac` as your `pinentry-program`:
 
 	```bash
@@ -61,19 +61,19 @@ page](https://git.zx2c4.com/password-store/about/).
 
 ## Usage
 - Search your passwords via the keyword `pw`.
-	+ <kbd>⏎</kbd>: Copy password to the clipboard.
-	+ <kbd>⌘</kbd><kbd>⏎</kbd>: Edit entry in your Terminal, using [the Terminal
-	configured in your Alfred
-	settings](https://www.alfredapp.com/help/features/terminal/) and your
-	`$EDITOR`.
-	+ <kbd>⌥</kbd><kbd>⏎</kbd>: Reveal `.gpg` file of the entry in Finder.
-	+ <kbd>⌃</kbd><kbd>⏎</kbd>: Delete the entry. (⚠️ This is irreversible if you
-	  are not using git.)
-	+ <kbd>⇧</kbd><kbd>⏎</kbd>: Show details of the entry. Select one of them
-	  to copy the value to your clipboard.
-	+ <kbd>Fn</kbd><kbd>⏎</kbd>: Generate a new password and overwrite this
-	  entry's password with it. Afterward, copy the new password. (⚠️ This removes
-	  the old password and is not reversible if you are not using git.)
+    - <kbd>⏎</kbd>: Copy password to the clipboard.
+    - <kbd>⌘</kbd><kbd>⏎</kbd>: Edit entry in your Terminal, using [the Terminal
+    configured in your Alfred
+    settings](https://www.alfredapp.com/help/features/terminal/) and your
+    `$EDITOR`.
+    - <kbd>⌥</kbd><kbd>⏎</kbd>: Reveal `.gpg` file of the entry in Finder.
+    - <kbd>⌃</kbd><kbd>⏎</kbd>: Delete the entry. (⚠️ This is irreversible if you
+      are not using git.)
+    - <kbd>⇧</kbd><kbd>⏎</kbd>: Show details of the entry. Select one of them
+      to copy the value to your clipboard.
+    - <kbd>Fn</kbd><kbd>⏎</kbd>: Generate a new password and overwrite this
+      entry's password with it. Afterward, copy the new password. (⚠️ This removes
+      the old password and is not reversible if you are not using git.)
 - Use the keyword `pw new` to create a new entry. You are then prompted for a
   folder to place the new entry in. The password of the new entry is
   auto-generated based on your `pass` settings, or can be inserted from your
@@ -99,9 +99,9 @@ compatibility. If you are interested in this subject, feel free to get in touch.
 
 <a href='https://ko-fi.com/Y8Y86SQ91' target='_blank'>
 <img
-	height='36'
-	style='border:0px;height:36px;'
-	src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3'
-	border='0'
-	alt='Buy Me a Coffee at ko-fi.com'
+    height='36'
+    style='border:0px;height:36px;'
+    src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3'
+    border='0'
+    alt='Buy Me a Coffee at ko-fi.com'
 /></a>
