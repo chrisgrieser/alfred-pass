@@ -67,13 +67,13 @@ page](https://git.zx2c4.com/password-store/about/).
     settings](https://www.alfredapp.com/help/features/terminal/) and your
     `$EDITOR`.
     - <kbd>⌥</kbd><kbd>⏎</kbd>: Reveal `.gpg` file of the entry in Finder.
-    - <kbd>⌃</kbd><kbd>⏎</kbd>: Delete the entry. (⚠️ This is irreversible if you
-      are not using git.)
+    - <kbd>⌃ ⌃</kbd> <kbd>⏎ ⏎</kbd>: Delete the entry. (⚠️ This is irreversible
+      if you are not using git.)
     - <kbd>⇧</kbd><kbd>⏎</kbd>: Show details of the entry. Select one of them
       to copy the value to your clipboard.
-    - <kbd>Fn</kbd><kbd>⏎</kbd>: Generate a new password and overwrite this
-      entry's password with it. Afterward, copy the new password. (⚠️ This removes
-      the old password and is not reversible if you are not using git.)
+    - <kbd>Fn</kbd><kbd>⏎</kbd>: Generate a new password and overwrite
+      this entry's password with it. Afterward, copy the new password. (⚠️ This
+      removes the old password and is not reversible if you are not using git.)
 - Use the keyword `pw new` to create a new entry. You are then prompted for a
   folder to place the new entry in. The password of the new entry is
   auto-generated based on your `pass` settings, or can be inserted from your
