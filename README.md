@@ -1,4 +1,4 @@
-# Alfred Client for the Pass-CLI
+# Alfred client for the Pass-CLI
 ![GitHub downloads](https://img.shields.io/github/downloads/chrisgrieser/alfred-pass/total?label=GitHub%20Downloads&style=plastic&logo=github)
 ![Alfred Gallery downloads](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchrisgrieser%2F.config%2Frefs%2Fheads%2Fmain%2FAlfred.alfredpreferences%2Falfred-gallery-downloads.yaml&query=pass&style=plastic&logo=alfred&label=Gallery%20Downloads&color=%235C1F87)
 ![Latest release](https://img.shields.io/github/v/release/chrisgrieser/alfred-pass?label=Latest%20Release&style=plastic)
@@ -29,7 +29,7 @@ Alfred-based UI for [pass](https://www.passwordstore.org/).
 - As opposed to regular usage of `pass`, the copied password is treated as
   transient, meaning it does not appear in Alfred's clipboard history.
 
-## Requirements & Installation
+## Requirements & installation
 1. [➡️ Download the latest release](https://github.com/chrisgrieser/alfred-pass/releases/latest)
 2. Install the requirements
 
