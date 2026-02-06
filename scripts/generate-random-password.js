@@ -7,7 +7,8 @@ app.includeStandardAdditions = true;
 // biome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run() {
 	// CONFIG
-	const pwCharacters = "abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	// avoiding `Il` and `O0` due to them being too similar when entering the passwort manually
+	const pwCharacters = "abcdefghijkmnopqrstuvwxyz123456789ABCDEFGHJKLMNPQRSTUVWXYZ";
 	const pwLength =
 		Number.parseInt(app.doShellScript("exec zsh -c 'echo \"$PASSWORD_STORE_GENERATED_LENGTH\"'")) ||
 		25;
