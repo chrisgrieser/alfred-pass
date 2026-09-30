@@ -19,7 +19,8 @@ Alfred-based UI for [pass](https://www.passwordstore.org/).
 
 ## Features
 - Copy password to the clipboard.
-- Copy a one-time password (OTP / 2FA code) to the clipboard, via [pass-otp](https://github.com/tadfisher/pass-otp).
+- Copy a one-time password (OTP / 2FA code) to the clipboard,
+  via [pass-otp](https://github.com/tadfisher/pass-otp).
 - Create a new entry.
 - Delete an entry.
 - Update the password of an entry.
@@ -33,18 +34,18 @@ Alfred-based UI for [pass](https://www.passwordstore.org/).
 1. [➡️ Download the latest release](https://github.com/chrisgrieser/alfred-pass/releases/latest)
 2. Install the requirements
 
-    ```zsh
-    brew install pass pinentry-mac
-    ```
+   ```zsh
+   brew install pass pinentry-mac
+   ```
 
-    *Optional:* To use the OTP feature, also install the `pass-otp` extension:
+   *Optional:* To use the OTP feature, also install the `pass-otp` extension:
 
-    ```zsh
-    brew install pass-otp
-    ```
+   ```zsh
+   brew install pass-otp
+   ```
 
 3. Setup `pass` with a GPG key. See the [pass
-    website](https://www.passwordstore.org/) for further information.
+   website](https://www.passwordstore.org/) for further information.
 4. Setup `pinentry-mac` as your `pinentry-program`:
 
     ```zsh
